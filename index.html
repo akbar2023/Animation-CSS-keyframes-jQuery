@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VolksWagen</title>
+    <!-- Link Stylesheet -->
+	<link rel="stylesheet" href="animHeader.css">
+	
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+	</script>
+</head>
+<body>
+
+    <header>
+		<!-- Icones animations -->
+        <div class="anim-icons" style="display:none;">
+        	<!-- carré gauche -->
+	        <img class="carre" src="media/pepitecarre.svg" alt="">
+	        <!-- carré vide -->
+	        <img id="carreCercle" class="carreVide" src="media/pepitecarreVide.svg" alt="">
+	        <!-- trait gris  -->
+	        <img class="traitGris" src="media/pepitetrait.svg" alt="">
+	        <!-- Fusée -->
+	        <img class="fusee" src="media/pepitestar.svg" alt="">
+	        <!-- Croix -->
+	        <img class="croix" src="media/pepitecroix.svg" alt="">
+        </div>
+
+		<script>
+			$( document ).ready(function() {
+				$(".anim-icons").show();
+
+				setTimeout(function(){
+       			$("#carreCercle").removeClass("carreVide");
+       			$("#carreCercle").addClass("carreVide2");
+   				}, 10000);
+
+			});
+		</script>
+
+    </header>
+    
+
+
+</body>
+</html>

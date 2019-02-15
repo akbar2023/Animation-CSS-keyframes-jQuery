@@ -1,0 +1,113 @@
+header{
+    height: 500px;
+    margin: 0 auto;
+    background: url("media/banner-light.jpg") no-repeat;
+    background-size: cover;
+}
+
+/* Pépite carré */
+@keyframes carreRemplie {
+0%  {left:50%; top:250px;}
+100%{left:20%; top:180px;}
+}
+
+.carre {
+position:absolute;
+left:20%; top:180px;
+animation: carreRemplie 15s ease;
+}
+
+/* Pépite grise */
+@keyframes pepiteGris {
+0%   {left:50%; top:250px;}
+100% {left:70%;top: 450px}
+}
+
+.traitGris {
+position: absolute;
+left:70%; top: 450px;
+animation: pepiteGris 10s ease;
+}
+
+/* Pépite Croix */
+@keyframes croixTop {
+0%   {left:50%; top:250px;}
+100% {top: 50px; left: 70%;}
+}
+
+.croix {
+position: absolute;
+top: 50px; left: 70%;
+animation: croixTop 8s ease;
+}
+
+/* Animation Fusée */
+@keyframes AnimFusee {
+0% {top:500px;}
+100% {top:100px;}
+}
+
+.fusee {
+position: absolute;
+left: 80%; top: 100px;
+animation: AnimFusee 20s ease;
+}
+
+/* Pépite carré vide fin l.106 */
+@media screen and (min-width: 1000px) {
+    @keyframes animCarreVide {
+        0% { transform: rotate(0deg) translateX(150px); }
+        100% { transform: rotate(360deg) translateX(150px); }
+    }
+
+    .carreVide {
+    position: absolute;
+    left:900px; top:200px;
+    animation: animCarreVide 10s ease;
+    }
+
+    .carreVide2 {
+        position: absolute;
+        left:1050px; top:200px;
+    }
+} /* fin screen min 1000px */
+
+@media screen and (min-width: 651px) and (max-width: 999px) {
+
+    @keyframes animCarreVide {
+        0% { transform: rotate(0deg) translateX(120px); }
+        100% { transform: rotate(360deg) translateX(120px); }
+    }
+
+    .carreVide {
+        position: absolute;
+        left:400px; top:200px;
+        animation: animCarreVide 10s ease;
+    }
+    
+    .carreVide2 {
+        position: absolute;
+        left:520px; top:200px;
+    }
+       
+} /* fin screen 651px - 999px */
+
+@media screen and (max-width: 650px) {
+
+    @keyframes animCarreVide {
+        0% { transform: rotate(0deg) translateX(90px); }
+        100% { transform: rotate(360deg) translateX(90px); }
+    }
+
+    .carreVide {
+        position: absolute;
+        left:200px; top:200px;
+        animation: animCarreVide 10s ease;
+    }
+    
+    .carreVide2 {
+        position: absolute;
+        left:290px; top:200px;
+    }
+        
+}/* fin screen max 650px */
